@@ -1,0 +1,1 @@
+web: gunicorn FullThrottle_Labs.wsgi --log-file -
