@@ -1,7 +1,11 @@
-from rest_framework import viewsets
 from testapp.models import User,ActivityPeriod
 from testapp.api.serializers import UserSerializer,ActivityPeriodSerializer
+from rest_framework import generics
 
-class UserApi(viewsets.ModelViewSet):
+class UserApi(generics.ListCreateAPIView):
+    queryset=User.objects.all()
     serializer_class=UserSerializer
-    queryset= User.objects.all()
+
+class ActivityPeriodApi(generics.ListCreateAPIView):
+    queryset=ActivityPeriod.objects.all()
+    serializer_class=ActivityPeriodSerializer
