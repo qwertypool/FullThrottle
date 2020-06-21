@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+9--8o-0$#ns1-07uqc8$8tzhl(6-uco9j&64dryy#g3+$vk1d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://full-throttle-labs.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['full-throttle-labs.herokuapp.com','127.0.0.1']
 
 
 # Application definition
