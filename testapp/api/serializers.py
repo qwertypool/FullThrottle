@@ -5,7 +5,7 @@ from testapp.models import User,ActivityPeriod
 class ActivityPeriodSerializer(ModelSerializer):
     class Meta:
         model=ActivityPeriod
-        fields = ['start_time','end_time',]
+        fields = ['active_id','start_time','end_time',]
 
 class UserSerializer(ModelSerializer):
     activity = ActivityPeriodSerializer(many=True, read_only=True)
