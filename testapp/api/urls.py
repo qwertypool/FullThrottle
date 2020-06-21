@@ -1,9 +1,8 @@
 from django.urls import path,include
-from rest_framework import routers
-from testapp.api.views import UserApi
-router=routers.DefaultRouter()
-router.register('jobinfo',UserApi)
+from testapp.api.views import UserApi,ActivityPeriodApi
+from testapp.api import views
 
 urlpatterns = [
-    path('',include(router.urls)),
+    path('user/', views.UserApi.as_view()),
+    path('activityperiod/', views.ActivityPeriodApi.as_view()),
 ]
